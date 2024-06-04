@@ -1,0 +1,251 @@
+/* Root variabelen voor kleurenschema en lettertype */
+:root {
+    --primary-color: #334155;
+    --secondary-color: #64748b;
+    --accent-color: #10b981;
+    --background-color: #f1f5f9;
+    --text-color: #1e293b;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Globale stijlen */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Utility classes */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* Header stijl */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Hero sectie */
+  .hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Functies sectie */
+  .features {
+    padding: 2rem 0;
+    background-color: white;
+  }
+  
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .features article h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+  }
+  
+  /* Over ons sectie */
+  .about {
+    padding: 2rem 0;
+    background-color: var(--background-color);
+  }
+  
+  .about h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  /* Contact sectie */
+  .contact {
+    padding: 2rem 0;
+    background-color: white;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.375rem;
+  }
+  
+  .contact form button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contact form button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* Footer stijl */
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  /* Media queries voor responsiviteit */
+  @media (max-width: 768px) {
+    header .container,
+    .hero,
+    .features .container,
+    .about .container,
+    .contact .container,
+    footer .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header h1,
+    header nav {
+      margin: 1rem 0;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    header nav ul li a {
+      padding: 0.5rem;
+    }
+  
+    .hero,
+    .features,
+    .about,
+    .contact,
+    footer {
+      padding: 1rem;
+    }
+  
+    .features .container,
+    .contact form {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact form input,
+    .contact form textarea,
+    .contact form button {
+      margin-bottom: 1rem; /* Voeg extra ruimte toe onderaan de formulierelementen */
+    }
+  }
+  
+  /* Extra aanpassingen voor kleinere mobiele schermen */
+  @media (max-width: 480px) {
+    header .container {
+      flex-direction: column;
+    }
+  
+    .hero h2 {
+      font-size: 1.75rem;
+    }
+  
+    .features article h3 {
+      font-size: 1rem;
+    }
+  
+    .about h2,
+    .contact h2 {
+      font-size: 1.5rem;
+    }
+    
+    .btn {
+      padding: 0.5rem 1rem; /* Verklein de knoppen een beetje */
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Biconomy</title>
+  <link rel="stylesheet" href="winkelwagen.css">
+</head>
+<body>
+  <div class="header__bar">Gratis verzending vanaf $50</div>
+  <nav class="section__container nav__container">
+    <a href="#" class="nav__logo">Biconomy</a>
+    <ul class="nav__links">
+      <!-- Link naar index.html toegevoegd bij HOME -->
+      <li class="link"><a href="index.html">HOME</a></li>
+      <li class="link"><a href="#">SHOP</a></li>
+      <li class="link"><a href="#">PAGES</a></li>
+      <li class="link"><a href="#">BLOG</a></li>
+      <li class="link"><a href="#">LOGIN</a></li>
+    </ul>
+    <div class="nav__icons">
+      <span><i class="ri-shield-user-line"></i></span>
+      <span><i class="ri-search-line"></i></span>
+      <span><i class="ri-shopping-bag-2-line"></i></span>
+    </div>
+  </nav>
+
+  <main class="section__container">
+    <!-- Checkout Form -->
+    <section class="checkout-form">
+      <h2 class="section__title">Checkout</h2>
+      <!-- Billing details form -->
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <!-- Sample items, replace with actual items from the cart -->
+          <ul>
+            <li>Product 1 - $20</li>
+            <li>Product 2 - $30</li>
+            <!-- Add more items as needed -->
+          </ul>
+          <p>Total: $50</p>
+        </div>
+        <!-- Shipping Options -->
+        <div class="form-group">
+          <label for="shipping">Shipping Method</label>
+          <select id="shipping">
+            <option value="standard">Standard Shipping - Free</option>
+            <option value="express">Express Shipping - $10</option>
+          </select>
+        </div>
+        <!-- Promo Code / Discount -->
+        <div class="form-group">
+          <label for="promo">Promo Code</label>
+          <input type="text" id="promo">
+          <button type="button" class="btn">Apply</button>
+        </div>
+        <!-- Payment Options -->
+        <div class="form-group">
+          <h3>Payment Method</h3>
+          <input type="radio" id="credit-card" name="payment" value="credit-card">
+          <label for="credit-card">Credit Card</label><br>
+          <input type="radio" id="paypal" name="payment" value="paypal">
+          <label for="paypal">PayPal</label><br>
+          <!-- Add more payment options as needed -->
+        </div>
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer__container">
+    <!-- Footer Content -->
+    <p>Contact us at support@biconomy.com</p>
+    <p>For any inquiries or assistance during the checkout process.</p>
+    <p><a href="#">Return Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
